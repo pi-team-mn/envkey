@@ -1,5 +1,10 @@
 # @pi-team-mn/envkey
+<a href="https://circleci.com/gh/pi-team-mn/envkey/tree/master">
+        <img src="https://circleci.com/gh/pi-team-mn/envkey/tree/master.svg?style=svg"
+            alt="build status"></a>
+
 Read an environment key or throw an error if it's not set
+
 
 ```javascript
 import { envkey } from '@pi-team-mn/envkey';
