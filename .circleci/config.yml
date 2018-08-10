@@ -24,7 +24,7 @@ jobs:
       - run: npm install
       - run:
           name: Run tests
-          command: npm build
+          command: npm run build
 
       - save_cache:
           paths:
