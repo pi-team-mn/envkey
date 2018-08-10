@@ -2,7 +2,6 @@ import { envkey } from './envkey';
 
 import { expect } from 'chai';
 
-// tslint:disable:space-before-function-paren
 describe('envkey', () => {
     it('should return request environment key', () => {
         const KEY = 'THIS_IS_A_KEY';
