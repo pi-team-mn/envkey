@@ -56,4 +56,5 @@ workflows:
             - test
           filters:
             branches:
-              ignore: /.*/
+              only:
+                - master
