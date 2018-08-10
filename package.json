@@ -1,0 +1,63 @@
+{
+  "name": "@pi-team-mn/envkey",
+  "version": "1.0.0",
+  "description": "Read an environment key or throw an error if it's not set",
+  "main": "lib/envkey.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.5.7",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "scripts": {
+    "build": "tsc && tslint -p tsconfig.json --format stylish -e \"src/*.spec.ts\" && npm run cover",
+    "lint": "tslint -p tsconfig.json --format stylish -e \"src/*.spec.ts\"",
+    "cover": "nyc npm run test",
+    "test": "mocha --require ts-node/register ./src/*.spec.ts",
+    "tsc": "tsc",
+    "watch": "mocha --watch --require ts-node/register --watch-extensions ts ./src/*.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pi-team-mn/envkey.git"
+  },
+  "author": "pi-team@mn.nl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pi-team-mn/envkey/issues"
+  },
+  "homepage": "https://github.com/pi-team-mn/envkey#readme",
+  "nyc": {
+    "check-coverage": true,
+    "lines": 70,
+    "statements": 70,
+    "functions": 70,
+    "branches": 70,
+    "include": [
+      "src/*.ts",
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "src/*.spec.ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text",
+      "text-summary",
+      "html"
+    ],
+    "all": true
+  }
+}

@@ -1,0 +1,257 @@
+/*
+   this is a suggested TSLint configuration file. Teams are free to adjust it to their likings,
+   but for new projects it might be easiest to simply copy this template to your project.
+
+   Rules file based on TSLint 5.x rules at https://palantir.github.io/tslint/rules/
+*/
+{
+    "rules": {
+
+        /* TypeScript-specific */
+        "adjacent-overload-signatures": true,
+        "ban-types": [
+            true,
+            [ "Object", "Use {} instead." ]
+        ],
+        "member-access": false,
+        "member-ordering": [
+            false
+        ],
+        "no-any": false,
+        "no-empty-interface": true,
+        "no-import-side-effect": true,
+        "no-inferrable-types": [true, "ignore-params"],
+        "no-internal-module": true,
+        // "no-magic-numbers": true,
+        "no-namespace": true,
+        "no-non-null-assertion": true,
+        "no-reference": true,
+        "no-var-requires": true,
+        "only-arrow-functions": [
+            true,
+            "allow-declarations"
+        ],
+        "prefer-for-of": true,
+        "promise-function-async": true,
+        "typedef": [
+            false
+        ],
+        "typedef-whitespace": [
+            true,
+            {
+                "call-signature": "nospace",
+                "index-signature": "nospace",
+                "parameter": "nospace",
+                "property-declaration": "nospace",
+                "variable-declaration": "nospace"
+            }
+        ],
+        "unified-signatures": true,
+
+        /* Functionality */
+        "await-promise": true,
+        "ban": false,
+        "curly": true,
+        "forin": true,
+        "import-blacklist": false,
+        "label-position": true,
+        "no-arg": true,
+        "no-bitwise": true,
+        "no-conditional-assignment": true,
+        "no-console": [
+            false,
+            "debug",
+            "log",
+            "info",
+            "warn",
+            "error",
+            "group",
+            "groupCollapsed",
+            "groupEnd",
+            "time",
+            "timeEnd",
+            "trace"
+        ],
+        "no-construct": true,
+        "no-debugger": true,
+        "no-duplicate-super": true,
+        "no-duplicate-variable": true,
+        "no-empty": true,
+        "no-eval": true,
+        "no-floating-promises": true,
+        "no-inferred-empty-object-type": true,
+        "no-invalid-template-strings": true,
+        "no-invalid-this": false, // disabled to allow new TypeScript 2.0 feature of typing this: function x(this:Something){...}
+        "no-misused-new": true,
+        "no-null-keyword": true,
+        "no-shadowed-variable": true,
+        "no-sparse-arrays": true,
+        "no-string-literal": true,
+        "no-string-throw": true,
+        "no-switch-case-fall-through": true,
+        "no-unbound-method": true,
+        "no-unsafe-any": false, // Deze rule maakt het anders wel heel bont. Dan mag je niet eens process.env benaderen
+        "no-unsafe-finally": true,
+        "no-unused-expression": false, // anders geeft chai problemen: expect(foo).to.equal('foo')
+        "no-unused-variable": [false], // Niet nodig want 'no-unused-locals' and 'no-unused-parameters' compiler options are enabled
+        "no-use-before-declare": true,
+        "no-var-keyword": true,
+        "no-void-expression": [false, "ignore-arrow-function-shorthand"], // Even niet zeiken want ik wil return resolve() moeten kunnen
+        "radix": false,
+        "restrict-plus-operands": true,
+        "strict-boolean-expressions": false,
+        "strict-type-predicates": true,
+        "switch-default": true,
+        "triple-equals": [true, "allow-null-check", "allow-undefined-check"],
+        "typeof-compare": false, // Doet typescript compiler tegenwoordig zelf al
+        "use-isnan": true,
+
+        /* Maintainability */
+        "cyclomatic-complexity": [true],
+        "eofline": true,
+        "indent": [
+            true,
+            "spaces"
+        ],
+        "linebreak-style": [
+            false
+        ],
+        "max-classes-per-file": [
+            true,
+            3
+        ],
+        "max-file-line-count": [
+            true,
+            350
+        ],
+        "max-line-length": [
+            true,
+            140
+        ],
+        "no-default-export": true,
+        "no-mergeable-namespace": true,
+        "no-require-imports": false,
+        "object-literal-sort-keys": false,
+        "prefer-const": true,
+        "trailing-comma": [
+            false,
+            {
+                "multiline": "never",
+                "singleline": "never"
+            }
+        ],
+
+        /* Style */
+        "align": [
+            true,
+            "arguments",
+            "parameters",
+            "statements"
+        ],
+        "array-type": [
+            true,
+            "array"
+        ],
+        "arrow-parens": [true, "ban-single-arg-parens"],
+        "arrow-return-shorthand": [true],
+        "callable-types": true,
+        "class-name": true,
+        "comment-format": [
+            true,
+            "check-space"
+        ],
+        "completed-docs": [false],
+        "file-header": [false],
+        "import-spacing": true,
+        "interface-name": [
+            true,
+            "never-prefix"
+        ],
+        "interface-over-type-literal": true,
+        "jsdoc-format": true,
+        "match-default-export-name": true,
+        "newline-before-return": false,
+        "new-parens": true,
+        "no-angle-bracket-type-assertion": true,
+        "no-boolean-literal-compare": true,
+        "no-consecutive-blank-lines": [
+            false
+        ],
+        "no-parameter-properties": false,
+        "no-reference-import": true,
+        "no-trailing-whitespace": true,
+        "no-unnecessary-callback-wrapper": true,
+        "no-unnecessary-initializer": true,
+        "no-unnecessary-qualifier": true,
+        "object-literal-key-quotes":[
+            true,
+            "as-needed"
+        ],
+        "object-literal-shorthand": true,
+        "one-line": [
+            true,
+            "check-catch",
+            "check-finally",
+            "check-else",
+            "check-open-brace",
+            "check-whitespace"
+        ],
+        "one-variable-per-declaration": [
+            false
+        ],
+        "ordered-imports": [
+            true,
+            {
+                "import-sources-order": "case-insensitive",
+                "named-imports-order": "case-insensitive"
+            }
+        ],
+        "prefer-function-over-method": [
+            true,
+            "allow-public",
+            "allow-protected"
+        ],
+        "prefer-method-signature": true,
+        "prefer-template": [
+            true,
+            "allow-single-concat"
+        ],
+        "quotemark": [
+            true,
+            "single",
+            "avoid-escape"
+        ],
+        "return-undefined": false, // Ik vind dat een functie best alleen { return } mag doen ipv { return undefined }
+        "semicolon": [
+            true,
+            "always"
+        ],
+        "space-before-function-paren": [
+            true,
+            {
+                "anonymous": "never",
+                "named": "never",
+                // "asyncArrow": "never",
+                "method": "never",
+                "constructor": "never"
+            }
+        ],
+        "variable-name": [
+            true,
+            "check-format",
+            "allow-leading-underscore",
+            "ban-keywords"
+        ],
+        "whitespace": [
+            true,
+            "check-branch",
+            "check-decl",
+            "check-operator",
+            "check-module",
+            "check-separator",
+            "check-type",
+            "check-typecast",
+            "check-preblock"
+        ]
+    }
+}
