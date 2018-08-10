@@ -1,6 +1,6 @@
 {
   "name": "@pi-team-mn/envkey",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Read an environment key or throw an error if it's not set",
   "main": "lib/envkey.js",
   "dependencies": {},
@@ -15,6 +15,10 @@
     "tslint": "^5.11.0",
     "typescript": "^3.0.1"
   },
+  "files": [
+    "lib/!(*.spec).js",
+    "lib/!(*.spec).d.ts"
+  ],
   "scripts": {
     "build": "tsc && tslint -p tsconfig.json --format stylish -e \"src/*.spec.ts\" && npm run cover",
     "lint": "tslint -p tsconfig.json --format stylish -e \"src/*.spec.ts\"",
