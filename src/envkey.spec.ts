@@ -1,6 +1,5 @@
-import { envkey } from './envkey';
-
 import { expect } from 'chai';
+import { envkey } from './envkey';
 
 describe('envkey', () => {
     it('should return request environment key', () => {
