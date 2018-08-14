@@ -1,6 +1,6 @@
 {
   "name": "@pi-team-mn/envkey",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Read an environment key or throw an error if it's not set",
   "main": "lib/envkey.js",
   "dependencies": {},
