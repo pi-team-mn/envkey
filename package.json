@@ -1,19 +1,19 @@
 {
   "name": "@pi-team-mn/envkey",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Read an environment key or throw an error if it's not set",
   "main": "lib/envkey.js",
   "dependencies": {},
   "devDependencies": {
-    "@types/chai": "^4.1.4",
-    "@types/mocha": "^5.2.5",
-    "@types/node": "^10.5.7",
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0",
-    "nyc": "^12.0.2",
-    "ts-node": "^7.0.0",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.1"
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.9.5",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.1",
+    "nyc": "^13.3.0",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.13.0",
+    "typescript": "^3.3.3333"
   },
   "files": [
     "lib/!(*.spec).js",
