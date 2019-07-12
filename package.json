@@ -1,6 +1,6 @@
 {
   "name": "@pi-team-mn/envkey",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Read an environment key or throw an error if it's not set",
   "main": "lib/envkey.js",
   "dependencies": {},
@@ -9,8 +9,8 @@
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.9.5",
     "chai": "^4.2.0",
-    "mocha": "^6.0.1",
-    "nyc": "^13.3.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
     "ts-node": "^8.0.2",
     "tslint": "^5.13.0",
     "typescript": "^3.3.3333"
